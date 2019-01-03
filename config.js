@@ -5,7 +5,7 @@ var config = {
   mysql: {
     host: "localhost",
     username: "root",
-    password: "",
+    password: "root",
     database: "salone1"
   }
 };

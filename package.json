@@ -15,7 +15,7 @@
     "sequelize": "^4.42.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^3.2.0",
     "chai-http": "^1.0.0",
     "nodemon": "^1.18.9"
   },

@@ -39,19 +39,19 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 var statement =
-  "INSERT INTO `charges` (`id`,'stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'1', 'educator', 'morning', '1000', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
+  "INSERT INTO `charges` (`id`,`stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'1', 'educator', 'morning', '1000', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
 sequelize.query(statement).then(data => {
   cb(data);
 });
 
 var statement =
-  "INSERT INTO `charges` (`id`,'stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'1', 'educator', 'afternoon', '1500', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
+  "INSERT INTO `charges` (`id`,`stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'1', 'educator', 'afternoon', '1500', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
 sequelize.query(statement).then(data => {
   cb(data);
 });
 
 var statement =
-  "INSERT INTO `charges` (`id`,stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'1', 'educator', 'evening', '2000', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
+  "INSERT INTO `charges` (`id`,`stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'1', 'educator', 'evening', '2000', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
 sequelize.query(statement).then(data => {
   cb(data);
 });
@@ -63,13 +63,31 @@ sequelize.query(statement).then(data => {
 });
 
 var statement =
-  "INSERT INTO `charges` (`id`,`stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,1', 'stylist', 'afternoon', '1000', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
+  "INSERT INTO `charges` (`id`,`stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'1', 'stylist', 'afternoon', '1000', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
 sequelize.query(statement).then(data => {
   cb(data);
 });
 
 var statement =
-  "INSERT INTO `charges` (`id`,'stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'1', 'stylist', 'evening', '1500', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
+  "INSERT INTO `charges` (`id`,`stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'1', 'stylist', 'evening', '1500', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
+sequelize.query(statement).then(data => {
+  cb(data);
+});
+
+var statement =
+  "INSERT INTO `charges` (`id`,`stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'2', 'educator', 'morning', '1000', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
+sequelize.query(statement).then(data => {
+  cb(data);
+});
+
+var statement =
+  "INSERT INTO `charges` (`id`,`stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'2', 'educator', 'afternoon', '500', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
+sequelize.query(statement).then(data => {
+  cb(data);
+});
+
+var statement =
+  "INSERT INTO `charges` (`id`,`stylistId`, `service`, `session`, `amount`, `createdAt`, `updatedAt`) VALUES (NULL,'2', 'educator', 'evening', '2500', '2018-12-31 00:00:00', '2018-12-31 00:00:00')";
 sequelize.query(statement).then(data => {
   cb(data);
 });

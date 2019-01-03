@@ -29,7 +29,7 @@ exports.getStylistBooking = (id, cb) => {
   var stylistId = id;
   console.log("stylistId", stylistId);
   var statement =
-    "SELECT DISTINCT bookings.date, bookings.location, salons.name, bookings.session, bookings.service FROM salons, bookings WHERE bookings.salon_id=salons.id AND bookings.stylist_id=:stylist_id";
+    "SELECT DISTINCT bookings.id,bookings.date, bookings.location, salons.name, bookings.session, bookings.service FROM salons, bookings WHERE bookings.salon_id=salons.id AND bookings.stylist_id=:stylist_id";
   //var statement = ('SELECT bookings.date, bookings.location, salons.name FROM salons, bookings //WHERE bookings.salon_id=salons.id AND bookings.salon_id="1"');
 
   //  Booking.findAll({where:{stylist_id:stylistId}, include: [ Salon ]}).then((bookings)=>{

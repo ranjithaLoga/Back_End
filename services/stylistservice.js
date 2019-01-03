@@ -50,7 +50,7 @@ exports.searchStylist = (date, session, service, location, cb) => {
   var search_session = session;
 
   var statement =
-    "SELECT stylists.id, stylists.name, stylists.location, stylists.experiance, stylists.number, charges.service, charges.amount FROM stylists, charges WHERE  stylists.id IN (SELECT bookings.stylist_id FROM bookings WHERE bookings.session != :session AND bookings.date != :date) AND charges.stylistId= stylists.id AND charges.service= :service AND stylists.location= :location";
+    "SELECT DISTINCT stylists.id, stylists.name, stylists.location, stylists.experiance, stylists.number, charges.service, charges.amount FROM stylists, charges WHERE  stylists.id IN (SELECT DISTINCT stylists.id FROM bookings,stylists WHERE bookings.stylist_id=stylists.id AND bookings.session != :session AND bookings.date != :date) AND charges.stylistId= stylists.id AND charges.service= :service AND stylists.location= :location AND charges.session= :session";
   console.log(statement);
   sequelize
     .query(statement, {

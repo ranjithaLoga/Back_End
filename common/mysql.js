@@ -3,7 +3,7 @@
 var config = require("../config");
 var Sequelize = require("sequelize");
 
-var sequelize = new Sequelize("salone1", "root", "", {
+var sequelize = new Sequelize("salone1", "root", "root", {
   host: "localhost",
   dialect: "mysql",
   operatorsAliases: false
